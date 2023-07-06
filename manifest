@@ -20,3 +20,5 @@ depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
 
 depends: libicuuc ? ($config.cxxopts.use_unicode)
+
+unicode-build-config: config.cxxopts.use_unicode=true
