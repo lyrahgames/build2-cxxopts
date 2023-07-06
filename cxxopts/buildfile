@@ -1,16 +1,15 @@
-./: lib{cxxopts}: hxx{cxxopts}
+libs =
+
+if $config.cxxopts.use_unicode
+  import libs += libicuuc%lib{icuuc}
+
+./: lib{cxxopts}: hxx{cxxopts} $libs
 {
   cxx.export.poptions = "-I$src_base"
+  cxx.export.libs = $libs
 }
 
 if $config.cxxopts.use_unicode
-{
-  import icuuc = libicuuc%lib{icuuc}
-  lib{cxxopts}: $icuuc
-  {
-    cxx.export.poptions += -DCXXOPTS_USE_UNICODE
-    cxx.export.libs = $icuuc
-  }
-}
+  lib{cxxopts}: cxx.export.poptions += -DCXXOPTS_USE_UNICODE
 
 hxx{cxxopts}@./: install = include/
