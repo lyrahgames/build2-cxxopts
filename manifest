@@ -6,12 +6,12 @@ language: c++
 summary: Lightweight C++ command line option parser
 license: MIT
 
-description-file: README.md
+description-file: UPSTREAM.README.md
 changes-file: CHANGELOG.md
-
 url: https://github.com/jarro2783/cxxopts
 # email:
 
+package-description-file: README.md
 package-url: https://github.com/build2-packaging/cxxopts/
 package-email: lyrahgames@mailbox.org
 #build-error-email: lyrahgames@mailbox.org
