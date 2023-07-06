@@ -1,0 +1,22 @@
+: 1
+name: cxxopts
+version: 3.1.1
+type: lib,binless
+language: c++
+summary: Lightweight C++ command line option parser
+license: MIT
+
+description-file: README.md
+changes-file: CHANGELOG.md
+
+url: https://github.com/jarro2783/cxxopts
+# email:
+
+package-url: https://github.com/build2-packaging/cxxopts/
+package-email: lyrahgames@mailbox.org
+#build-error-email: lyrahgames@mailbox.org
+
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
+
+depends: libicuuc ? ($config.cxxopts.use_unicode)

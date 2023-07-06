@@ -1,0 +1,7 @@
+project = cxxopts
+
+using version
+using config
+using test
+using install
+using dist

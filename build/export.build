@@ -1,0 +1,6 @@
+$out_root/
+{
+  include cxxopts/
+}
+
+export $out_root/cxxopts/$import.target
