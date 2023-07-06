@@ -39,7 +39,12 @@ The single header-only C++ library to use cxxopts as command-line argument parse
     import cxxopts = cxxopts%lib{cxxopts}
 
 ## Configuration
-There are no configuration options vailable.
+### Enable Unicode
+
+    config [bool] config.cxxopts.use_unicode ?= false
+
+Unicode functionality in cxxopts is based on ICU library.
+It will be added as interface dependency if this config variable is set to `true`.
 
 ## Issues
 Currently, there are no known issues.
